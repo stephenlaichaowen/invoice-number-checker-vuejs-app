@@ -23,8 +23,8 @@ new Vue({
   },
   mounted() {
     this.invoiceList = JSON.parse(localStorage.getItem('invoice-number')) || []
-    this.isActive = JSON.parse(localStorage.getItem('menu-state')) || 'price'
-    this.isChn = JSON.parse(localStorage.getItem('chinese-state')) || true
+    this.isActive = JSON.parse(localStorage.getItem('menu-state')) 
+    this.isChn = JSON.parse(localStorage.getItem('chinese-state')) 
 
     if (this.isActive == 'price') this.showPrice()
     if (this.isActive == 'admin') this.showAdmin()
