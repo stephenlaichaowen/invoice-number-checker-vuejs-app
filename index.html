@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css"
+    integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+  <script defer src="script.js"></script>
+  <title>統一發票兌獎</title>
+</head>
+
+<body>
+  <div class="list">
+    <header>
+      <i class="lang fas fa-globe" @click="switchLang"></i>
+    </header>
+
+    <div class="top">
+      <div class="admin animate__animated animate__fadeIn" :class="{ showAdmin: isShowAdmin }">
+        <h1>{{ adminTitle }}</h1>
+        <input type="text" :placeholder="adminPrompt" maxlength="8" v-model="numbers" @keyup.enter="save" autofocus><br><br>
+        <button class="saveBtn" @click="save">{{ adminBtn }}</button>
+      </div>
+
+      <div class="price animate__animated animate__fadeIn" :class="{ showPrice: isShowPrice }">
+        <h1>{{ priceTitle }}</h1>
+        <input type="text" :placeholder="pricePrompt" v-model="digits" @keyup.enter="ask" maxlength="3" autofocus>
+        <ul>
+          <li v-for="(item, index) in invoiceList" v-if="result = item.match(digits) ? true : false">
+            <span>{{ item }}</span>
+            <i class="remove far fa-times-circle" @click="remove(index)"></i>
+          </li>
+        </ul>
+      </div>
+
+      <div class="manual" :class="{ showManual: isShowManual }">
+        <h1>{{ manualTitle }}</h1><br>
+        <p class="content">{{ manualContent }}</p>
+      </div>
+    </div>
+
+    <footer>
+      <span @click="showPrice" :class="{active: isActive == 'price'}">{{ menuPrice }}</span>
+      <span @click="showAdmin" :class="{active: isActive == 'admin'}">{{ menuAdmin }}</span>
+      <span @click="showManual" :class="{active: isActive == 'manual'}">{{ menuManual }}</span>
+    </footer>
+  </div>
+</body>
+
+</html>

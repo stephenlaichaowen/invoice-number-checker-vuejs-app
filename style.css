@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --theme-color: #4CAF50;
+  --border-style: 1px solid;
+}
+
+body {
+  text-align: center;
+  /* overflow: hidden; */
+  overflow-y: scroll;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+.list {
+  max-width: 575px;
+  margin: auto;
+  position: relative;
+  min-height: 100vh;
+  margin-bottom: -100px;
+}
+
+h1 {
+  padding-top: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+ul {
+  padding: 0;
+  overflow-y: scroll;
+  /* border: var(--border-style); */
+  margin-bottom: 50px;
+}
+
+li {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 5px;
+  border-bottom: 1px solid #ccc;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-width: 575px;
+  display: flex;
+  background-color: var(--theme-color);
+}
+
+footer span {
+  width: 50%;
+  padding: 10px;
+  cursor: pointer;
+  color: white;
+}
+
+.top {
+  padding: 0 10px;
+}
+
+.remove {
+  margin-right: 10px;
+}
+
+.showAdmin {
+  display: none;
+}
+
+.showManual {
+  display: none;
+}
+
+.showPrice {
+  display: none;
+}
+
+button {
+  background-color: var(--theme-color);
+  border: none;
+  color: white;
+  width: 100%;
+  padding: 15px 32px;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.active {
+  background-color: var(--theme-color);
+  color: white;
+  background: linear-gradient(90deg, #9ebd13 0%, #008552 100%);
+}
+
+.remove {
+  display: flex;
+  align-items: center;
+}
+
+header {
+  padding: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.lang {
+  margin: 5px;
+}
+
+.content {
+  /* text-align-last: left; */
+  overflow-y: scroll;
+  margin-bottom: -100px;
+}
+
+.saveBtn {
+  outline: none;
+}
+
+.saveBtn:hover {
+  background-color: white;
+  color: var(--theme-color);
+  border: 2px solid var(--theme-color);
+}
