@@ -55,18 +55,18 @@ li {
 }
 
 footer {
-  position: fixed;
+  position: absolute;
   bottom: 0;
-  left: 0%;
+  left: 0;
   /* transform: translateX(-50%); */
-  right: 0;
+  /* right: 0; */
   max-width: 575px;
   display: flex;
   background-color: var(--theme-color);
 }
 
 footer span {
-  width: 50%;
+  width: 33.33vw;
   padding: 15px;
   cursor: pointer;
   color: white;
@@ -110,9 +110,7 @@ button {
 .active {
   background-color: var(--theme-color);
   color: white;
-  /* background: linear-gradient(90deg, #9ebd13 0%, #008552 100%); */
-  background: linear-gradient(90deg, #f8ff00 0%, #3ad59f 100%);
-  /* background: linear-gradient(90deg, #0700b8 0%, #00ff88 100%); */
+  background: linear-gradient(90deg, #9ebd13 0%, #008552 100%);
 }
 
 .remove {
