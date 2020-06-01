@@ -109,7 +109,8 @@ button {
 .active {
   background-color: var(--theme-color);
   color: white;
-  background: linear-gradient(90deg, #9ebd13 0%, #008552 100%);
+  /* background: linear-gradient(90deg, #9ebd13 0%, #008552 100%); */
+  background: linear-gradient(90deg, #f8ff00 0%, #3ad59f 100%);
 }
 
 .remove {
