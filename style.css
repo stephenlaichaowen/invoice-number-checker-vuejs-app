@@ -58,15 +58,14 @@ footer {
   position: absolute;
   bottom: 0;
   left: 0;
-  /* transform: translateX(-50%); */
-  /* right: 0; */
+  right: 0;
   max-width: 575px;
   display: flex;
   background-color: var(--theme-color);
 }
 
 footer span {
-  width: 33.33vw;
+  width: 50%;
   padding: 15px;
   cursor: pointer;
   color: white;
