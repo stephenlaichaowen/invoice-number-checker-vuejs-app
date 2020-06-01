@@ -2,7 +2,7 @@ new Vue({
   el: '.list',
   data: {
     isActive: '',
-    isChn: null,
+    isChn: true,
     digits: '',
     result: null,
     numbers: '',
