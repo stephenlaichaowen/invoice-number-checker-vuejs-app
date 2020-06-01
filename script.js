@@ -1,8 +1,8 @@
 new Vue({
   el: '.list',
   data: {
-    isActive: '',
-    isChn: null,
+    isActive: 'price',
+    isChn: true,
     digits: '',
     result: null,
     numbers: '',
