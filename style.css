@@ -142,3 +142,7 @@ header {
   color: var(--theme-color);
   border: 2px solid var(--theme-color);
 }
+
+.invoice-number {
+  font-size: 18px;
+}

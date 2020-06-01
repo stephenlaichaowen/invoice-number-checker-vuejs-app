@@ -33,7 +33,7 @@
         <input type="text" :placeholder="pricePrompt" v-model="digits" @keyup.enter="ask" maxlength="3" autofocus>
         <ul>
           <li v-for="(item, index) in invoiceList" v-if="result = item.match(digits) ? true : false">
-            <span>{{ item }}</span>
+            <span class="invoice-number">{{ item }}</span>
             <i class="remove far fa-times-circle" @click="remove(index)"></i>
           </li>
         </ul>
